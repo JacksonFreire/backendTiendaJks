@@ -27,7 +27,7 @@ public class Venta implements Serializable{
 	private String precio;
 	private String color;
 	private String cantidad;
-	private String precioTotal;
+	private double precioTotal;
 
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
@@ -81,11 +81,12 @@ public class Venta implements Serializable{
 		this.createAt = createAt;
 	}
 
-	public String getPrecioTotal() {
+	public double getPrecioTotal() {
 		return precioTotal;
 	}
 
-	public void setPrecioTotal(String precioTotal) {
+	public void setPrecioTotal(double precioTotal) {
 		this.precioTotal = precioTotal;
 	}
+
 }
