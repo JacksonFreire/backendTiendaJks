@@ -52,8 +52,7 @@ public class VentaController {
 		currentVenta.setColor(venta.getColor());
 		currentVenta.setPrecio(venta.getPrecio());
 		currentVenta.setProducto(venta.getProducto());
-		currentVenta.setPrecioTotal(venta.getPrecioTotal());
-		
+		currentVenta.setPrecioTotal(venta.getCantidad() * venta.getPrecio());
 
 		this.ventaService.save(currentVenta);
 		return currentVenta;
@@ -62,7 +61,7 @@ public class VentaController {
 	@DeleteMapping("/ventas/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
-		Venta currentVenta= this.ventaService.findById(id);
+		Venta currentVenta = this.ventaService.findById(id);
 		this.ventaService.delete(currentVenta);
 	}
 
