@@ -52,6 +52,8 @@ public class VentaController {
 		currentVenta.setColor(venta.getColor());
 		currentVenta.setPrecio(venta.getPrecio());
 		currentVenta.setProducto(venta.getProducto());
+		currentVenta.setProducto(venta.getPrecioTotal());
+		
 
 		this.ventaService.save(currentVenta);
 		return currentVenta;
