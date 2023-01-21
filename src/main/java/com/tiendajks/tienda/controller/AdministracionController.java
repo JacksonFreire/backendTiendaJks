@@ -49,6 +49,7 @@ public class AdministracionController {
 		Producto currentProducto = this.productoService.findById(id);
 
 		currentProducto.setNombre(producto.getNombre());
+		currentProducto.setMarca(producto.getMarca());
 		currentProducto.setPrecio(producto.getPrecio());
 		currentProducto.setDetalles(producto.getDetalles());
 		currentProducto.setCantidad(producto.getCantidad());

@@ -14,8 +14,8 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "productos")
-public class Producto implements Serializable{
-	
+public class Producto implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -23,6 +23,7 @@ public class Producto implements Serializable{
 	private Long id;
 
 	private String nombre;
+	private String marca;
 	private Double precio;
 	private String detalles;
 	private int cantidad;
@@ -47,6 +48,14 @@ public class Producto implements Serializable{
 		this.nombre = nombre;
 	}
 
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
 	public Double getPrecio() {
 		return precio;
 	}
@@ -54,7 +63,7 @@ public class Producto implements Serializable{
 	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
-	
+
 	public String getDetalles() {
 		return detalles;
 	}
