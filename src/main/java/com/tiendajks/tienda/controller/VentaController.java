@@ -47,7 +47,7 @@ public class VentaController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Venta update(@RequestBody Venta venta, @PathVariable Long id) {
 		Venta currentVenta = this.ventaService.findById(id);
-
+		//realizar un control con los id antes de modificar
 		currentVenta.setCantidad(venta.getCantidad());
 		currentVenta.setColor(venta.getColor());
 		currentVenta.setPrecio(venta.getPrecio());
